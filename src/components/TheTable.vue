@@ -1,5 +1,5 @@
 <template>
-	<div class="table">
+	<div class="table__content">
 		<div class="table__header">
 			<div class="table__row">
 				<div class="table__cell table__cell-check">
@@ -35,16 +35,10 @@
 				</div>
 				<div class="table__cell table__cell-id">18026ff3b90</div>
 				<div class="table__cell table__cell-username">@tlawait</div>
-				<div class="table__cell table__cell-type">
-					<span class="icon-deposit"></span>Снятие
-				</div>
-				<div class="table__cell table__cell-date">
-					<b>11 апреля 2022</b> 3 д. назад
-				</div>
+				<div class="table__cell table__cell-type"><span class="icon-deposit"></span>Снятие</div>
+				<div class="table__cell table__cell-date"><b>11 апреля 2022</b> 3 д. назад</div>
 				<div class="table__cell table__cell-sum">1 000 ₽</div>
-				<div class="table__cell table__cell-description">
-					Оплата за интернет Yota
-				</div>
+				<div class="table__cell table__cell-description">Оплата за интернет Yota</div>
 				<div class="table__cell table__cell-attachment">
 					<span
 						><svg

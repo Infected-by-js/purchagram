@@ -1,4 +1,4 @@
-.table {
+.table__content {
 	position: relative;
 	display: table;
 	width: 100%;
@@ -21,6 +21,47 @@
 	}
 }
 
+.table__header {
+	display: grid;
+	grid-auto-flow: row;
+	grid-auto-rows: min-content;
+
+	.table__row {
+		padding: 0.4rem 0;
+
+		border-bottom: 1px solid $color-grey-100;
+		align-items: center;
+	}
+
+	.table__cell {
+		font-weight: $fw-regular;
+		font-size: 1rem;
+		padding: 0.4rem 10px;
+	}
+}
+
+.table__body {
+	display: grid;
+	grid-auto-flow: row;
+	grid-auto-rows: min-content;
+
+	.table__row {
+		padding: 0.55rem 0;
+
+		&:hover {
+			color: $color-black;
+			cursor: pointer;
+			background-color: $color-grey-100;
+		}
+	}
+
+	.table__cell {
+		font-weight: $fw-light;
+		font-size: 1rem;
+		padding: 0.55rem 10px;
+	}
+}
+
 .table__row {
 	display: grid;
 	grid-column-gap: 10px;
@@ -28,13 +69,13 @@
 
 	grid-template-columns:
 		auto
-		minmax(80px, 1fr)
-		minmax(100px, 1.5fr)
-		minmax(100px, 1fr)
+		minmax(110px, 1fr)
+		minmax(110px, 1.5fr)
+		minmax(110px, 1fr)
 		minmax(150px, 1fr)
-		minmax(80px, 1.5fr)
-		minmax(80px, 2fr)
-		minmax(100px, 0.5fr);
+		minmax(120px, 1.5fr)
+		minmax(100px, 2fr)
+		minmax(50px, 0.5fr);
 
 	align-content: start;
 	align-items: center;
@@ -79,94 +120,48 @@
 	}
 }
 
-.table__header {
-	display: grid;
-	grid-auto-flow: row;
-	grid-auto-rows: min-content;
+.table__cell {
+	&-check {
+		grid-area: check;
+	}
 
-	.table__row {
-		padding: 0.4rem 0;
+	&-id {
+		grid-area: id;
+	}
 
-		color: $color-primary;
-		font-weight: $fw-medium;
-		font-size: 1rem;
-		border-bottom: 1px solid $color-grey-100;
-		align-items: center;
+	&-username {
+		grid-area: username;
+	}
 
-		@media (max-width: 480px) {
-			box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+	&-type {
+		grid-area: type;
+		color: $color-violet;
+	}
+
+	&-date {
+		grid-area: date;
+		color: $color-blue;
+
+		b {
+			display: block;
 		}
 	}
 
-	& .table__cell {
-		padding: 0.4rem 10px;
+	&-sum {
+		grid-area: sum;
+		color: $color-green;
 	}
-}
 
-.table__body {
-	display: grid;
-	grid-auto-flow: row;
-	grid-auto-rows: min-content;
+	&-description {
+		grid-area: description;
+		color: $color-yellow;
+	}
 
-	.table__row {
-		padding: 0.55rem 0;
+	&-attachment {
+		grid-area: attachment;
 
-		color: $color-primary;
-		font-weight: $fw-light;
-		font-size: 1rem;
-
-		&:hover {
-			color: $color-black;
-			cursor: pointer;
-			background-color: $color-grey-100;
+		@media (max-width: 640px) {
+			display: none;
 		}
-	}
-
-	& .table__cell {
-		padding: 0.55rem 10px;
-	}
-}
-
-.table__cell-check {
-	grid-area: check;
-}
-
-.table__cell-id {
-	grid-area: id;
-}
-
-.table__cell-username {
-	grid-area: username;
-}
-
-.table__cell-type {
-	grid-area: type;
-	color: $color-violet;
-}
-
-.table__cell-date {
-	grid-area: date;
-	color: $color-blue;
-
-	b {
-		display: block;
-	}
-}
-
-.table__cell-sum {
-	grid-area: sum;
-	color: $color-green;
-}
-
-.table__cell-description {
-	grid-area: description;
-	color: $color-yellow;
-}
-
-.table__cell-attachment {
-	grid-area: attachment;
-
-	@media (max-width: 640px) {
-		display: none;
 	}
 }

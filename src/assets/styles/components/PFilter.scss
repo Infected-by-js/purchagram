@@ -1,0 +1,35 @@
+.filter {
+	display: flex;
+	align-items: center;
+
+	&__search {
+	}
+	&__username {
+	}
+	&__type {
+	}
+	&__date {
+	}
+	&__new-transaction {
+	}
+}
+
+.sort-button {
+	font-size: 14px;
+	line-height: 1rem;
+	font-weight: normal;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__icon {
+		margin-right: 4px;
+	}
+
+	&__text {
+		margin-right: 4px;
+	}
+
+	&__arrow {
+	}
+}
