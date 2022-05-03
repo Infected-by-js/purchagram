@@ -1,0 +1,172 @@
+.table {
+	position: relative;
+	display: table;
+	width: 100%;
+	border-collapse: collapse;
+
+	&__header {
+		display: table-header-group;
+	}
+
+	&__body {
+		display: table-row-group;
+	}
+
+	&__row {
+		display: table-row;
+	}
+
+	&__cell {
+		display: table-cell;
+	}
+}
+
+.table__row {
+	display: grid;
+	grid-column-gap: 10px;
+	grid-template-areas: 'check id username type date sum description attachment';
+
+	grid-template-columns:
+		auto
+		minmax(80px, 1fr)
+		minmax(100px, 1.5fr)
+		minmax(100px, 1fr)
+		minmax(150px, 1fr)
+		minmax(80px, 1.5fr)
+		minmax(80px, 2fr)
+		minmax(100px, 0.5fr);
+
+	align-content: start;
+	align-items: center;
+
+	@media (max-width: 960px) {
+		grid-template-areas:
+			'check id       date  sum         attachment'
+			'check username type  description attachment';
+
+		grid-template-columns:
+			auto
+			minmax(120px, 2fr)
+			minmax(80px, 2fr)
+			minmax(80px, 2fr)
+			minmax(100px, 0.5fr);
+	}
+
+	@media (max-width: 640px) {
+		grid-template-areas:
+			'check id       date sum'
+			'check username type description';
+
+		grid-template-rows: repeat(2, min-content);
+		grid-template-columns:
+			auto
+			minmax(120px, 1.5fr)
+			minmax(100px, 1.5fr)
+			minmax(80px, 1fr);
+	}
+
+	@media (max-width: 480px) {
+		grid-template:
+			'check id         date'
+			'check id         sum'
+			'check username   type'
+			'check username   description';
+
+		grid-template-columns:
+			auto
+			minmax(120px, 1.5fr)
+			minmax(80px, 1fr);
+	}
+}
+
+.table__header {
+	display: grid;
+	grid-auto-flow: row;
+	grid-auto-rows: min-content;
+
+	.table__row {
+		padding: 0.4rem 0;
+
+		color: $color-primary;
+		font-weight: $fw-medium;
+		font-size: 1rem;
+		border-bottom: 1px solid $color-grey-100;
+		align-items: center;
+
+		@media (max-width: 480px) {
+			box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+		}
+	}
+
+	& .table__cell {
+		padding: 0.4rem 10px;
+	}
+}
+
+.table__body {
+	display: grid;
+	grid-auto-flow: row;
+	grid-auto-rows: min-content;
+
+	.table__row {
+		padding: 0.55rem 0;
+
+		color: $color-primary;
+		font-weight: $fw-light;
+		font-size: 1rem;
+
+		&:hover {
+			color: $color-black;
+			cursor: pointer;
+			background-color: $color-grey-100;
+		}
+	}
+
+	& .table__cell {
+		padding: 0.55rem 10px;
+	}
+}
+
+.table__cell-check {
+	grid-area: check;
+}
+
+.table__cell-id {
+	grid-area: id;
+}
+
+.table__cell-username {
+	grid-area: username;
+}
+
+.table__cell-type {
+	grid-area: type;
+	color: $color-violet;
+}
+
+.table__cell-date {
+	grid-area: date;
+	color: $color-blue;
+
+	b {
+		display: block;
+	}
+}
+
+.table__cell-sum {
+	grid-area: sum;
+	color: $color-green;
+}
+
+.table__cell-description {
+	grid-area: description;
+	color: $color-yellow;
+}
+
+.table__cell-attachment {
+	grid-area: attachment;
+
+	@media (max-width: 640px) {
+		display: none;
+	}
+}
