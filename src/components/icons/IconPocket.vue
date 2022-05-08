@@ -1,0 +1,22 @@
+<template>
+	<svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path
+			d="M32.0087 11.205H4.25867V30H32.0087V11.205Z"
+			stroke="#65676D"
+			stroke-width="2.25"
+			stroke-miterlimit="10"
+		/>
+		<path
+			d="M24.2387 17.595H12.0287V23.61H24.2387V17.595Z"
+			stroke="#65676D"
+			stroke-width="2.25"
+			stroke-miterlimit="10"
+		/>
+		<path
+			d="M12.1337 11.205V5.25H24.1337V11.205"
+			stroke="#65676D"
+			stroke-width="2.25"
+			stroke-miterlimit="10"
+		/>
+	</svg>
+</template>
