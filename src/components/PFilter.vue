@@ -22,8 +22,7 @@
 			<input type="text" class="search__input" placeholder="Поиск по описанию" />
 		</div>
 		<button class="sort-button filter__username">
-			<span class="sort-button__icon">
-			</span>
+			<span class="sort-button__icon"> </span>
 			<p class="sort-button__text">Пользователь</p>
 			<span class="sort-button__arrow">arrow</span>
 		</button>
@@ -36,10 +35,6 @@
 			<span class="sort-button__icon"></span>
 			<p class="sort-button__text">Дата операции</p>
 			<span class="sort-button__arrow">arrow</span>
-		</button>
-		<button class="sort-button filter__new-transaction">
-			<span class="sort-button__icon"></span>
-			<p class="sort-button__text">Новая операция</p>
 		</button>
 	</div>
 </template>
