@@ -1,7 +1,8 @@
 <template>
-  <div class="container">
-    <the-header />
-    <div class="content content__header">
+  <div class="wrapper">
+    <p-header />
+  </div>
+  <!-- <div class="content content__header">
       <h1 class="content__title">Последние операции</h1>
     </div>
     <div class="content content__body">
@@ -11,31 +12,37 @@
         <p-table />
       </div>
       <p-chosen-sum />
-    </div>
-  </div>
+    </div> -->
 </template>
 
 <script>
-import TheHeader from '@/components/TheHeader.vue';
-import PTable from '@/components/PTable.vue';
-import PFilter from '@/components/PFilter.vue';
-import PChosenSum from '@/components/PChosenSum.vue';
+import PHeader from '@/components/PHeader.vue';
+// import PTable from '@/components/PTable.vue';
+// import PFilter from '@/components/PFilter.vue';
+// import PChosenSum from '@/components/PChosenSum.vue';
 
 export default {
   name: 'TheOverview',
   components: {
-    TheHeader,
-    PTable,
-    PFilter,
-    PChosenSum,
+    PHeader,
+    // PTable,
+    // PFilter,
+    // PChosenSum,
   },
 };
 </script>
 
-<style scoped>
-.content__body {
+<style>
+.wrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100vw;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 1376px;
 }
 </style>
