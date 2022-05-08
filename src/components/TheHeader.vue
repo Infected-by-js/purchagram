@@ -1,9 +1,9 @@
 <template>
-	<header>header</header>
+  <header>logo</header>
 </template>
 
 <script>
 export default {
-	name: 'TheHeader',
+  name: 'TheHeader',
 };
 </script>

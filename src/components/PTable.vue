@@ -29,7 +29,7 @@
         <div class="table__cell table__cell-sum">1 000 ₽</div>
         <div class="table__cell table__cell-description">Оплата за интернет Yota</div>
         <div class="table__cell table__cell-attachment">
-          <span> <icon-attachment /></span>
+          <span> <icon-settings /></span>
           1
         </div>
       </div>
@@ -38,13 +38,7 @@
 </template>
 
 <script>
-import {IconAttachment} from '@/components/icons';
-
 export default {
-  name: 'TheTable',
-
-  components: {
-    IconAttachment,
-  },
+  name: 'PTable',
 };
 </script>

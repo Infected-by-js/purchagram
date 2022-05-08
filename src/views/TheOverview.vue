@@ -8,7 +8,7 @@
       <div class="table">
         <p-filter />
 
-        <the-table />
+        <p-table />
       </div>
       <p-chosen-sum />
     </div>
@@ -17,7 +17,7 @@
 
 <script>
 import TheHeader from '@/components/TheHeader.vue';
-import TheTable from '@/components/TheTable.vue';
+import PTable from '@/components/PTable.vue';
 import PFilter from '@/components/PFilter.vue';
 import PChosenSum from '@/components/PChosenSum.vue';
 
@@ -25,7 +25,7 @@ export default {
   name: 'TheOverview',
   components: {
     TheHeader,
-    TheTable,
+    PTable,
     PFilter,
     PChosenSum,
   },
