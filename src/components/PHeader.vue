@@ -3,7 +3,6 @@
     <div class="container header__container">
       <router-link :to="{name: 'home'}" class="header__logo">
         <svg
-          class="logo"
           width="30"
           height="40"
           viewBox="0 0 30 40"
